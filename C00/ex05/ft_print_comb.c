@@ -1,20 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 12:07:26 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/07 12:18:55 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/06 18:34:23 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/06 18:49:02 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+#include <unistd.h>
+
+void	putchar(char c)
 {
-    int c;
-    int b;
-    c = b;
-	b = *a;
-	a = *b;
+	write(1, &c, 1);
+}
+
+void	ft_print_comb(void)
+{
+	int c;
+	int d;
+	int u;
+
+	c = '0';
+	while (c <= '9')
+	{
+		d = c + 1;
+		while (c <= '9')
+		{
+			d = c + 1;
+			while (d <= '9')
+			{
+				putchar(c);
+				putchar(d);
+				putchar(u);
+				if (c != '7' || d != '8' || u != '9')
+					write(1, ", ", 2);
+				u++;
+			}
+			d++;
+		}
+		c++;
+	}
 }

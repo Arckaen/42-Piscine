@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 12:07:26 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/07 12:18:55 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/08 11:44:06 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/08 12:41:02 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+#include <unistd.h>
+
+void	ft_sort_int_tab(int *tab, int size)
 {
-    int c;
-    int b;
-    c = b;
-	b = *a;
-	a = *b;
-}
+	int k;
+	k = 0;
+	size--;
+	while (size > 0)
+		{
+		*tab[k] = *tab[size];
+		k++;
+		size--;
+		}
+ }

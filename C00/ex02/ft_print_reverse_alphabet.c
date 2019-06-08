@@ -14,5 +14,5 @@
 
 void	ft_print_alphabet(void)
 {
-	write(1, "wyxwvutsrqponmlkjihgfedcba", 26);
+	write(1, "zyxwvutsrqponmlkjihgfedcba", 26);
 }
