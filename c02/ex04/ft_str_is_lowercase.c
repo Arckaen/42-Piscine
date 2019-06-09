@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/08 11:44:06 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/08 17:54:26 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/09 12:10:17 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/09 12:39:19 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_sort_int_tab(int *tab, int size)
+int        ft_str_is_numeric(char *str)
 {
-	int *tabdeux;
-	int k;
+	int i;
 
-	k = 0;
-	size--;
-	while (size > 0)
+	i = 0;
+	if (str[i] == '\0')
 	{
-		tabdeux[k] = tab[size];
-		k++;
-		size--;
+		return (1);
 	}
-	*tab = *tabdeux;
+	while (str[i] != '\0')
+	{
+		i++;
+		if (str[i] < 97 || str[i] > 122)
+	 	{
+		return (0);
+		}
+	}
+return (1);
 }

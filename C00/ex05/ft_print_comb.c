@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:34:23 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/06 18:49:02 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/09 13:52:37 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ void	ft_print_comb(void)
 	while (c <= '9')
 	{
 		d = c + 1;
-		while (c <= '9')
+		while (d <= '9')
 		{
-			d = c + 1;
-			while (d <= '9')
+			u = d + 1;
+			while (u <= '9')
 			{
 				putchar(c);
 				putchar(d);

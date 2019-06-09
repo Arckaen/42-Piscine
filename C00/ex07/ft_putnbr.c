@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:23:10 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/07 12:48:23 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/09 14:02:46 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ void	ft_putchar(char c)
 void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
-{
-	write(1, "-2147483648", 11);
-}
+	{
+		write(1, "-2147483648", 11);
+	}
 	else if (nb >= 0 && nb < 9)
 	{
-		ft_putchar(nb + 0);
+		ft_putchar(nb + '0');
 	}
 	else if (nb < 0)
 	{

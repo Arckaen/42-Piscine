@@ -5,20 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 14:11:01 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/08 11:40:51 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/08 16:05:41 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/08 16:10:44 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_strlen(char *str)
+void	ft_putstr(char *str)
 {
 	char i;
+
 	i = 0;
 	while (*str[i] != "/0")
-		{
+	{
+		write(1, *str[i], 1);
 		i++;
-		}
-	return(i)
+	}
+	return (i);
 }

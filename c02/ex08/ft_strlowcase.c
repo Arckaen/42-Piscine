@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/08 11:44:06 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/08 17:54:26 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/09 13:02:11 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/09 13:09:04 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_sort_int_tab(int *tab, int size)
+int ft_strupcase(char *str);
 {
-	int *tabdeux;
-	int k;
-
-	k = 0;
-	size--;
-	while (size > 0)
+	int i;
+	
+	i = 0;
+	while(str[i] != '\0')
 	{
-		tabdeux[k] = tab[size];
-		k++;
-		size--;
-	}
-	*tab = *tabdeux;
+			i++;
+			if (str[i] < 91 && str[i] > 64)
+			{
+				str[i] = str[i] - 32;
+			}
+}
 }

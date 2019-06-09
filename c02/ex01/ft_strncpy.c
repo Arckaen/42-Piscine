@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/08 11:44:06 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/08 17:54:26 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/08 20:14:23 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/08 23:41:11 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_sort_int_tab(int *tab, int size)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int *tabdeux;
-	int k;
+	unsigned int i;
 
-	k = 0;
-	size--;
-	while (size > 0)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		tabdeux[k] = tab[size];
-		k++;
-		size--;
+		dest[i] = src[i];
+		i++;
 	}
-	*tab = *tabdeux;
+	if (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
