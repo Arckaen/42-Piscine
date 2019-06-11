@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 13:33:04 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/09 20:17:09 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/11 18:24:27 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/11 19:47:57 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	char i;
+	int k;
+	int i;
+	int len;
 
+	k = 0;
 	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, str[i], 1);
+	while (to_find[i] != '\0')
 		i++;
+	len = i;
+	i = 0;
+	while (to_find[k] != str[i])
+	{
+		i++;
+		if (str[i] == '\0')
+			return (null);
+	}
+	while (to_find[k] == str[i])
+	{
+		i++;
+		k++;
+		if (k >= len)
+			return (to_find[0]);
 	}
 }

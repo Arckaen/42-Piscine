@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 13:33:04 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/09 20:17:09 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/11 16:30:54 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/11 16:44:08 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char i;
+	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s1[i] != '\0' && i < n)
 	{
-		write(1, str[i], 1);
 		i++;
-	}
+		if (s1[i] > s2[i])
+		{
+			return (1);
+		}
+		if (s1[i] < s2[i])
+		{																		
+			return (-1);
+		}
+	}	
+			return (0);
 }

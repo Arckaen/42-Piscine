@@ -6,12 +6,12 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 12:34:17 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/07 12:36:13 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/09 20:22:15 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-    *div = a / b;
+	*div = a / b;
 	*mod = a % b;
 }

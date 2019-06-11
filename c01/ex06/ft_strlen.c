@@ -6,20 +6,20 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 16:05:41 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/08 16:10:44 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/09 20:17:53 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void	ft_strlen(char *str)
 {
 	char i;
 
 	i = 0;
-	while (*str[i] != "/0")
+	while (str[i] != "/0")
 	{
-		write(1, *str[i], 1);
+		write(1, str[i], 1);
 		i++;
 	}
 	return (i);
