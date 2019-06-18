@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/09 12:52:16 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/17 16:47:36 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/06 15:23:10 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/09 23:57:33 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
-{
-	int i;
+#include <unistd.h>
 
-	i = 0;
-	while (str[i] != '\0')
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		if (str[i] < 123 && str[i] > 96)
-			str[i] = str[i] - 32;
-		i++;
+		write(1, "-2147483648", 11);
 	}
-	return (str);
+	else if (nb >= 0 && nb <= 9)
+	{
+		ft_putchar(nb + '0');
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(nb * (-1));
+	}
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }

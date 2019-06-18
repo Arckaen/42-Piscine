@@ -26,13 +26,13 @@ char	*ft_strstr(char *str, char *to_find)
 	{
 		i++;
 		if (str[i] == '\0')
-			return (null);
+			return (NULL);
 	}
 	while (to_find[k] == str[i])
 	{
 		i++;
 		k++;
-		if (k >= len)
-			return (to_find[0]);
+		if (k <= len)
+            return (str[i - len]);
 	}
 }

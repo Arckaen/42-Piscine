@@ -6,21 +6,22 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 13:02:11 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/09 13:09:04 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/17 16:48:30 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strupcase(char *str);
+char	*ft_strlowcase(char *str)
 {
 	int i;
-	
+
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-			i++;
-			if (str[i] < 91 && str[i] > 64)
-			{
-				str[i] = str[i] - 32;
-			}
-}
+		if (str[i] < 91 && str[i] > 64)
+		{
+			str[i] = str[i] + 32;
+		}
+		i++;
+	}
+	return (str);
 }

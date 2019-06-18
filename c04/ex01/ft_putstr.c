@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/09 12:52:16 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/17 16:47:36 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/07 13:33:04 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/09 20:17:09 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	int i;
+	char i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 123 && str[i] > 96)
-			str[i] = str[i] - 32;
+		write(1, str[i], 1);
 		i++;
 	}
-	return (str);
 }

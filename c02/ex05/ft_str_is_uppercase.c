@@ -6,26 +6,20 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 12:18:31 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/09 12:40:30 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/17 16:44:52 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_numeric(char *str)
+int		ft_str_is_uppercase(char *str)
 {
 	int i;
 
 	i = 0;
-	if (str[i] == '\0')
-	{
-		return (1);
-	}
 	while (str[i] != '\0')
 	{
+		if (str[i] < 65 || str[i] > 91)
+			return (0);
 		i++;
-		if (str[i] < 65 || str[i] > 90)
-		{
-		return (0);
-		}
 	}
-return (1);
+	return (1);
 }

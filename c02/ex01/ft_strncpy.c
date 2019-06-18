@@ -6,18 +6,18 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 20:14:23 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/08 23:41:11 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/17 16:42:30 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
 	i = 0;
-	while (src[i] != '\0')
+	if (n == 0)
+		return (dest);
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
@@ -27,6 +27,5 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }

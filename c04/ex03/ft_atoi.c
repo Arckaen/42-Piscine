@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/09 12:52:16 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/17 16:47:36 by nborrat          ###   ########.fr       */
+/*   Created: 2019/06/12 15:39:28 by nborrat           #+#    #+#             */
+/*   Updated: 2019/06/13 21:48:10 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+int		ft_atoi(char *str)
 {
 	int i;
+	int t;
+	int e;
 
 	i = 0;
-	while (str[i] != '\0')
+	t = 0;
+	e = 0;
+	while (str[i] >= 8 && str[i] <= 13 || str[i] == 32)
+		i++;
+	while (str[i] == 43 || str[i] == 45)
 	{
-		if (str[i] < 123 && str[i] > 96)
-			str[i] = str[i] - 32;
+		if (str[i] == 45)
+			t++;
 		i++;
 	}
-	return (str);
+	while (str [i] > 47 && str[i] < 58)
+    {
+		e = (e * 10) + str[i] - 48;
+        i++;
+    }
+	if ((t % 2) == 1)
+		return (-e);
+	else
+		return (e)
 }

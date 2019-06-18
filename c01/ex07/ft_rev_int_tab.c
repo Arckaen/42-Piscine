@@ -6,22 +6,21 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 11:44:06 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/09 20:18:32 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/14 11:44:19 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int *tabdeux;
 	int k;
+	int buffer;
 
 	k = 0;
-	size--;
-	while (size > 0)
+	while (k < size)
 	{
-		tabdeux[k] = tab[size];
-		k++;
+		buffer = tab[k];
+		tab[k] = tab[size - 1];
 		size--;
+		k++;
 	}
-	*tab = *tabdeux;
 }
