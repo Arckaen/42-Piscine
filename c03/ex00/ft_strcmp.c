@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 13:14:16 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/11 13:47:13 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/19 02:16:32 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int		ft_strcmp(char *s1, char *s2)
 		i++;
 		if (s1[i] > s2[i])
 		{
-			return (1);
+			return (s1[i] - s2[i]);
 		}
 		if (s1[i] < s2[i])
 		{
-			return (-1);
+			return (s1[i] - s2[i]);
 		}
 	}
 	return (0);

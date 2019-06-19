@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 12:18:31 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/17 16:44:52 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/18 21:36:39 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ int		ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 65 || str[i] > 91)
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			i++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }

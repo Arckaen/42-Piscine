@@ -6,33 +6,28 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 18:24:27 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/11 19:47:57 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/19 15:03:05 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int k;
 	int i;
-	int len;
+	int d;
 
-	k = 0;
 	i = 0;
-	while (to_find[i] != '\0')
-		i++;
-	len = i;
-	i = 0;
-	while (to_find[k] != str[i])
+	if (to_find[i] == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
+		d = 0;
+		while (to_find[d] == str[i + d])
+		{
+			d++;
+			if (to_find[d] == '\0')
+				return (&str[i]);
+		}
 		i++;
-		if (str[i] == '\0')
-			return (NULL);
 	}
-	while (to_find[k] == str[i])
-	{
-		i++;
-		k++;
-		if (k <= len)
-            return (str[i - len]);
-	}
+	return (0);
 }

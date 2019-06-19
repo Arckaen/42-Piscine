@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 16:30:54 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/11 16:44:08 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/19 15:01:23 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 		{
 			return (s1[i] - s2[i]);
 		}
-        i++;
+		i++;
 	}
-    return (0);
+	return (0);
 }

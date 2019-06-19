@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 13:02:11 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/17 16:48:30 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/18 22:06:03 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@ char	*ft_strlowcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 91 && str[i] > 64)
-		{
+		if (str[i] <= 'Z' && str[i] >= 'A')
 			str[i] = str[i] + 32;
-		}
-		i++;
+		else
+			i++;
 	}
 	return (str);
 }
