@@ -6,25 +6,25 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 17:55:46 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/11 18:13:50 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/19 21:14:11 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int i;
-	unsigned int k;
+	int				i;
+	unsigned int	d;
 
-	k = 0;
 	i = 0;
+	d = 0;
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while (src[k] != '\0' && src[k] <= nb)
+	while (src[d] != '\0' && d < nb)
 	{
-		dest[i] = src[k];
-		k++;
+		dest[i] = src[d];
+		d++;
 		i++;
 	}
 	dest[i] = '\0';

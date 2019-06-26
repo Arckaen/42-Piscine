@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 01:38:36 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/18 03:00:07 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/23 19:10:22 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@ int		ft_is_prime(int nb)
 {
 	int i;
 
-	i = 1;
-	if (nb == 1);
+	i = 3;
+	if (nb < 2)
 		return (0);
-	if (nb == 2):
+	if (nb == 2)
 		return (1);
-	while(i =< nb/2)
+	while (i <= nb / i)
 	{
-        while(i <= nb/i)
-        {
-            if(i%2 != 1 && nb%i == 0)
-            return (0);
-        }
-	 i++;
+		if (nb % i == 0)
+			return (0);
+		i++;
 	}
 	return (1);
 }

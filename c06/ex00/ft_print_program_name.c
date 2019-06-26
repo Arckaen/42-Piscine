@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 23:07:30 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/18 23:13:02 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/23 15:44:08 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ void	ft_putstr(char *str)
 	}
 }
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	ft_putstr(argv[0]);
+	if (argc >= 1)
+	{
+		ft_putstr(argv[0]);
+		write(1, "\n", 1);
+	}
 	return (0);
 }

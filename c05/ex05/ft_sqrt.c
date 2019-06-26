@@ -6,22 +6,22 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 01:11:16 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/18 01:17:59 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/21 11:27:20 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int		ft_sqrt(int nb)
 {
 	int i;
 
 	i = 2;
 	if (nb == 1)
-	return (1);
-	while(i =< nb/2)
+		return (1);
+	while (i <= nb / i)
 	{
-		if(nb%i == 0 && nb / i = i)
+		if (nb % i == 0 && nb / i == i)
 			return (i);
-	i++;
+		i++;
 	}
 	return (0);
 }

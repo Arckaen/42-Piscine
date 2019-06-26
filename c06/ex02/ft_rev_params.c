@@ -6,7 +6,7 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/19 12:21:14 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/19 12:29:35 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/22 21:43:23 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putstr(char *str)
 {
 	int i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -23,9 +24,9 @@ void	ft_putstr(char *str)
 	}
 }
 
-	int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	char i;
+	int i;
 
 	i = argc - 1;
 	while (i > 0)
@@ -33,6 +34,6 @@ void	ft_putstr(char *str)
 		ft_putstr(argv[i]);
 		write(1, "\n", 1);
 		i--;
-	 }
+	}
 	return (0);
 }
