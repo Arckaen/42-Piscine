@@ -6,12 +6,12 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/23 00:12:35 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/23 00:15:07 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/26 11:04:34 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __FT_H
-#define __FT_H
+# define __FT_H
 
 void	ft_putchar(char c);
 void	ft_swap(int *a, int *b);

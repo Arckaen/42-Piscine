@@ -6,12 +6,11 @@
 /*   By: nborrat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/23 16:01:09 by nborrat           #+#    #+#             */
-/*   Updated: 2019/06/23 16:03:17 by nborrat          ###   ########.fr       */
+/*   Updated: 2019/06/26 11:06:07 by nborrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __FT_ABS_H
-#define __FT_ABS_H 
-#define ABS(n) n < 0 ? n * -1: n
+# define __FT_ABS_H
+# define ABS(n) n < 0 ? n * -1: n
 #endif
-
